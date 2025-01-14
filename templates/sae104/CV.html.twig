@@ -1,0 +1,144 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon CV{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        color: #343a40;
+        background-color: #f8f9fa;
+    }
+    .cv-header {
+        background-color: #007bff;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+    }
+    .cv-section {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        color: #343a40;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .cv-section h2 {
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .cv-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .cv-section ul li {
+        margin-bottom: 10px;
+    }
+    .cv-section ul li h3 {
+        margin: 0;
+    }
+    footer {
+        background-color: #343a40;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/s/a/e104/">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/s/a/e104/About">About</a>
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/s/a/e104/CV">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/s/a/e104/Portfolio">E-Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container mt-5">
+    <section class="cv-header mb-4">
+        <h1>Mon CV</h1>
+        <h2>Ingénieur Réseaux et Télécommunications</h2>
+    </section>
+
+    <section class="cv-section mb-4">
+        <h2>Informations Personnelles</h2>
+        <p><strong>Nom:</strong> John Doe</p>
+        <p><strong>Email:</strong> john.doe@example.com</p>
+        <p><strong>Téléphone:</strong> 123-456-7890</p>
+    </section>
+
+    <section class="cv-section mb-4">
+        <h2>Formations</h2>
+        <ul>
+            <li>
+                <h3>Master en Informatique</h3>
+                <p>Université de Exemple, 2018 - 2020</p>
+            </li>
+            <li>
+                <h3>Licence en Informatique</h3>
+                <p>Université de Exemple, 2015 - 2018</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="cv-section mb-4">
+        <h2>Expériences Professionnelles</h2>
+        <ul>
+            <li>
+                <h3>Développeur Web chez XYZ</h3>
+                <p>Janvier 2020 - Présent</p>
+                <p>Description du poste et des responsabilités.</p>
+            </li>
+            <li>
+                <h3>Stagiaire Développeur chez ABC</h3>
+                <p>Juin 2019 - Décembre 2019</p>
+                <p>Description du poste et des responsabilités.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="cv-section mb-4">
+        <h2>Compétences</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>PHP, Symfony</li>
+            <li>MySQL, PostgreSQL</li>
+        </ul>
+    </section>
+
+    <section class="cv-section mb-4">
+        <h2>Langues</h2>
+        <ul>
+            <li>Français (natif)</li>
+            <li>Anglais (courant)</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2023 John Doe. Tous droits réservés.</p>
+    <p>Ce site est protégé par les lois sur le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation.</p>
+</footer>
+
+{% endblock %}

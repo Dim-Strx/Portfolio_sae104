@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+
+    footer {
+        background-color: #343a40;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/s/a/e104/">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/s/a/e104/About">About</a>
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/s/a/e104/CV">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/s/a/e104/Portfolio">E-Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="example-wrapper">
+    <h1>Bienvenue sur mon site !</h1>
+    <p>Nom: John Doe</p>
+    <p>Prénom: John</p>
+    <p>Groupe TP: Groupe 1</p>
+    <p>Je suis un étudiant passionné par le développement web et les nouvelles technologies.</p>
+</div>
+
+
+<footer>
+    <p>&copy; 2023 John Doe. Tous droits réservés.</p>
+    <p>Ce site est protégé par les lois sur le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation.</p>
+</footer>
+
+
+{% endblock %}
