@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class SAE104Controller extends AbstractController
 {
-    #[Route('/s/a/e104', name: 'app_s_a_e104')]
+    #[Route('/', name: 'app_s_a_e104')]
     public function index(): Response
     {
         return $this->render('sae104/index.html.twig', [
@@ -39,4 +39,5 @@ class SAE104Controller extends AbstractController
             'controller_name' => 'SAE104Controller',
         ]);
     }
+    
 }

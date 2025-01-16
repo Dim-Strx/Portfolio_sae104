@@ -3,91 +3,22 @@
 {% block title %}Mon CV{% endblock %}
 
 {% block body %}
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        color: #343a40;
-        background-color: #f8f9fa;
-    }
-    .cv-header {
-        background-color: #007bff;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        border-radius: 8px;
-    }
-    .cv-section {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        color: #343a40;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .cv-section h2 {
-        border-bottom: 2px solid #007bff;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-    }
-    .cv-section ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    .cv-section ul li {
-        margin-bottom: 10px;
-    }
-    .cv-section ul li h3 {
-        margin: 0;
-    }
-    footer {
-        background-color: #343a40;
-        color: white;
-        padding: 10px 0;
-        text-align: center;
-        margin-top: 20px;
-    }
-</style>
 
-<header>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/s/a/e104/">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/s/a/e104/About">About</a>
-                        <span class="visually-hidden">(current)</span>
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/s/a/e104/CV">CV</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/s/a/e104/Portfolio">E-Portfolio</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
 
-<main class="container mt-5">
-    <section class="cv-header mb-4">
+<main class="container mt-5 mb-5">
+    <section class="header mb-4">
         <h1>Mon CV</h1>
         <h2>Ingénieur Réseaux et Télécommunications</h2>
     </section>
 
-    <section class="cv-section mb-4">
+    <section class="section mb-4">
         <h2>Informations Personnelles</h2>
         <p><strong>Nom:</strong> John Doe</p>
         <p><strong>Email:</strong> john.doe@example.com</p>
         <p><strong>Téléphone:</strong> 123-456-7890</p>
     </section>
 
-    <section class="cv-section mb-4">
+    <section class="section mb-4">
         <h2>Formations</h2>
         <ul>
             <li>
@@ -101,7 +32,7 @@
         </ul>
     </section>
 
-    <section class="cv-section mb-4">
+    <section class="section mb-4">
         <h2>Expériences Professionnelles</h2>
         <ul>
             <li>
@@ -117,7 +48,7 @@
         </ul>
     </section>
 
-    <section class="cv-section mb-4">
+    <section class="section mb-4">
         <h2>Compétences</h2>
         <ul>
             <li>HTML, CSS, JavaScript</li>
@@ -126,7 +57,7 @@
         </ul>
     </section>
 
-    <section class="cv-section mb-4">
+    <section class="section mb-4">
         <h2>Langues</h2>
         <ul>
             <li>Français (natif)</li>
@@ -134,11 +65,46 @@
         </ul>
     </section>
 
+    <h2>Télécharger le CV</h2>
+    <form id="telechargerForm" onsubmit="return handleFormSubmit(event)">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="text-center mb-4">
+            <button type="submit" class="btn btn-primary">Télécharger le CV en PDF</button>
+        </div> 
+    </form>
+
+    <script>
+    function handleFormSubmit(event) {
+        event.preventDefault(); // Empêche l'envoi classique du formulaire
+
+        // Récupère les valeurs des champs
+        const nom = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        // Vérifie si tous les champs sont remplis
+        if (!nom || !email) {
+            alert("Veuillez remplir tous les champs avant de confirmer.");
+            return false;
+        }
+
+        // Si les champs sont valides, lance le téléchargement
+        const downloadLink = document.createElement('a');
+        downloadLink.href = '/docs/fcv.pdf'; // Chemin du fichier à télécharger
+        downloadLink.download = 'fcv.pdf';
+        downloadLink.click();
+
+        return true;
+    }
+</script>
 </main>
 
-<footer>
-    <p>&copy; 2023 John Doe. Tous droits réservés.</p>
-    <p>Ce site est protégé par les lois sur le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation.</p>
-</footer>
+<button class="back-to-top" onclick="scrollToTop()">↑</button>
 
 {% endblock %}

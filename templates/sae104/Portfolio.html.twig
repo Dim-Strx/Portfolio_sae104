@@ -1,53 +1,134 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SAE104Controller!{% endblock %}
+{% block title %}E-Portfolio{% endblock %}
 
 {% block body %}
+<div class="header mb-4">
+    <h1>Mon E-Portfolio</h1>
+</div>
 
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-
-    footer {
-        background-color: #343a40;
-        color: white;
-        padding: 10px 0;
-        text-align: center;
-        margin-top: 20px;
-    }
-</style>
-
-<header>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/s/a/e104/">Home</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarColor02">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/s/a/e104/About">About</a>
-                        <span class="visually-hidden">(current)</span>
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/s/a/e104/CV">CV</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/s/a/e104/Portfolio">E-Portfolio</a>
-                    </li>
-                </ul>
+<div class="port-section mb-4">
+    <h2>Compétences</h2>
+    <div class="accordion" id="accordionCompetences">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingWebDev">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWebDev" aria-expanded="true" aria-controls="collapseWebDev">
+                    Développement Web
+                </button>
+            </h2>
+            <div id="collapseWebDev" class="accordion-collapse collapse show" aria-labelledby="headingWebDev" data-bs-parent="#accordionCompetences">
+                <div class="accordion-body">
+                    <p>HTML, CSS, JavaScript, PHP, Symfony</p>
+                    <img src="path/to/image1.jpg" alt="Image de développement web">
+                </div>
             </div>
         </div>
-    </nav>
-</header>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingDatabase">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDatabase" aria-expanded="false" aria-controls="collapseDatabase">
+                    Base de Données
+                </button>
+            </h2>
+            <div id="collapseDatabase" class="accordion-collapse collapse" aria-labelledby="headingDatabase" data-bs-parent="#accordionCompetences">
+                <div class="accordion-body">
+                    <p>MySQL, PostgreSQL</p>
+                    <img src="path/to/image2.jpg" alt="Image de base de données">
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFrameworks">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFrameworks" aria-expanded="false" aria-controls="collapseFrameworks">
+                    Frameworks et Bibliothèques
+                </button>
+            </h2>
+            <div id="collapseFrameworks" class="accordion-collapse collapse" aria-labelledby="headingFrameworks" data-bs-parent="#accordionCompetences">
+                <div class="accordion-body">
+                    <p>React, Angular, Vue.js</p>
+                    <img src="path/to/image3.jpg" alt="Image de frameworks">
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingProjectManagement">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProjectManagement" aria-expanded="false" aria-controls="collapseProjectManagement">
+                    Gestion de Projets
+                </button>
+            </h2>
+            <div id="collapseProjectManagement" class="accordion-collapse collapse" aria-labelledby="headingProjectManagement" data-bs-parent="#accordionCompetences">
+                <div class="accordion-body">
+                    <p>Scrum, Agile, Kanban</p>
+                    <img src="path/to/image4.jpg" alt="Image de gestion de projets">
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingDevTools">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDevTools" aria-expanded="false" aria-controls="collapseDevTools">
+                    Outils de Développement
+                </button>
+            </h2>
+            <div id="collapseDevTools" class="accordion-collapse collapse" aria-labelledby="headingDevTools" data-bs-parent="#accordionCompetences">
+                <div class="accordion-body">
+                    <p>Git, Docker, Jenkins</p>
+                    <img src="path/to/image5.jpg" alt="Image d'outils de développement">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="port-section mb-4">
+    <h2>Projets</h2>
+    <div class="accordion" id="accordionProjects">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingProject1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProject1" aria-expanded="true" aria-controls="collapseProject1">
+                    Projet 1: Site Web de E-commerce
+                </button>
+            </h2>
+            <div id="collapseProject1" class="accordion-collapse collapse show" aria-labelledby="headingProject1" data-bs-parent="#accordionProjects">
+                <div class="accordion-body">
+                    <p>Description du projet, technologies utilisées, et résultats obtenus.</p>
+                    <img src="path/to/project1.jpg" alt="Image du projet 1">
+                    <img src="path/to/project1-2.jpg" alt="Image du projet 1">
+                    <img src="path/to/project1-3.jpg" alt="Image du projet 1">
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingProject2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProject2" aria-expanded="false" aria-controls="collapseProject2">
+                    Projet 2: Application de Gestion de Tâches
+                </button>
+            </h2>
+            <div id="collapseProject2" class="accordion-collapse collapse" aria-labelledby="headingProject2" data-bs-parent="#accordionProjects">
+                <div class="accordion-body">
+                    <p>Description du projet, technologies utilisées, et résultats obtenus.</p>
+                    <img src="path/to/project2.jpg" alt="Image du projet 2">
+                    <img src="path/to/project2-2.jpg" alt="Image du projet 2">
+                    <img src="path/to/project2-3.jpg" alt="Image du projet 2">
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingProject3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProject3" aria-expanded="false" aria-controls="collapseProject3">
+                    Projet 3: Blog Personnel
+                </button>
+            </h2>
+            <div id="collapseProject3" class="accordion-collapse collapse" aria-labelledby="headingProject3" data-bs-parent="#accordionProjects">
+                <div class="accordion-body">
+                    <p>Description du projet, technologies utilisées, et résultats obtenus.</p>
+                    <img src="path/to/project3.jpg" alt="Image du projet 3">
+                    <img src="path/to/project3-2.jpg" alt="Image du projet 3">
+                    <img src="path/to/project3-3.jpg" alt="Image du projet 3">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<footer>
-    <p>&copy; 2023 John Doe. Tous droits réservés.</p>
-    <p>Ce site est protégé par les lois sur le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation.</p>
-</footer>
-
+<button class="back-to-top" onclick="scrollToTop()">↑</button>
 
 {% endblock %}

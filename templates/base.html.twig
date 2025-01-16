@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet"href="https://bootswatch.com/5/quartz/bootstrap.min.css">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>"> 
         {% block stylesheets %}
         {% endblock %}
 
@@ -12,7 +12,213 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
+    <style>
+        /*Page acceuil*/
+        .wrapper { 
+        margin: 1em auto; 
+        font: 20px/1.8 'Arial', sans-serif; 
+        text-align: center;
+        }
+        .wrapper h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .wrapper p {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        .btn-primary {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /*boutton retour en haut*/
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 24px;
+            line-height: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .back-to-top:hover {
+            background-color: #0056b3;
+        }
+
+        /*page autres*/
+        body {
+        font-family: 'Arial', sans-serif;
+        color: #343a40;
+        background-color: #f8f9fa;
+        font-size: 18px;
+        }
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 24px;
+            max-width: 1500px;
+            margin: 2em auto;
+            background-color: #007bff;
+        }
+        .section {
+           background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 2em auto;
+            max-width: 1500px;
+            width: 95%;
+            color: #343a40;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+        }
+
+        /*Pour portfolio*/
+
+        .port-section {
+            padding: 25px;
+            border-radius: 8px;
+            margin: 2em auto;
+            max-width: 1500px;
+            width: 95%;
+            color: #343a40;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 15px;
+        }
+        .section ul li h3 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+
+        .item {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            color: #343a40;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+        }
+        .item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .item p {
+            margin-bottom: 10px;
+        }
+        .item img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        .form-control {
+            background-color: #ffffff;
+            color: #343a40;
+            border: 1px solid #ced4da;
+            font-size: 18px;
+        }
+        .form-control::placeholder {
+            color: #6c757d;
+        }
+        .form-label {
+            color: #343a40;
+            font-size: 18px;
+        }
+        footer {
+        background-color: #343a40;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 16px;
+        position: relative;
+        }
+
+        
+    </style>
+    <header>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/s/a/e104/About">About</a>
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/s/a/e104/CV">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/s/a/e104/Portfolio">E-Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
     <body>
         {% block body %}{% endblock %}
     </body>
+    <footer>
+        <p>&copy; 2023 John Doe. Tous droits réservés.</p>
+        <p>Ce site est protégé par les lois sur le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation.</p>
+    </footer>
+
+    <script src="https://bootswatch.com/_vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.onscroll = function() {
+            var button = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        };
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
 </html>
+
+
+
+
