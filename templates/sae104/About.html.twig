@@ -3,50 +3,96 @@
 {% block title %}À propos{% endblock %}
 
 {% block body %}
-
-
 <main class="container mt-5 mb-5">
     <section class="header mb-4">
         <h1>À propos de moi</h1>
     </section>
 
     <section class="section mb-4">
-        <p>Bonjour, je m'appelle John Doe. Je suis un étudiant passionné par le développement web et les nouvelles technologies. Voici quelques informations sur mes loisirs, passions et activités :</p>
+        <p>Bonjour, je m'appelle Térence. Je suis un étudiant passionné par le développement et les nouvelles technologies informatiques. Voici quelques informations sur mes loisirs, passions et activités :</p>
     </section>
 
     <section class="section mb-4">
         <h2>Loisirs</h2>
         <ul>
-            <li>Lecture de romans de science-fiction et de fantasy</li>
-            <img src="path/to/loisir1.jpg" alt="Image de lecture">
-            <li>Randonnée et exploration de la nature</li>
-            <img src="path/to/loisir2.jpg" alt="Image de randonnée">
-            <li>Jeux vidéo, en particulier les jeux de stratégie et de rôle</li>
-            <img src="path/to/loisir3.jpg" alt="Image de jeux vidéo">
+            <li><h3>Sport en plein air</h3></li>
+            <div class="image-container">
+                <div class="image-item">
+                    <img src="/docs/voile.JPG" alt="Image de voile" class="responsive-img">
+                    <p class="image-caption">Rassemblemet de voile</p>
+                </div>
+                <div class="image-item">
+                    <img src="/docs/ski.jpg" alt="Image de ski" class="responsive-img">
+                    <p class="image-caption">Ski</p>
+                </div>
+            </div>
+            <p>Rien de tel pour se ressourcer en plein air que le plaisir de naviguer ou de profiter d'un magnifique point de vue en haut de la montagne.</p>
+            <li><h3>Lecture de bande dessinée - manga en tout genre</h3></li>
+            <div class="image-container">
+                <div class="image-item">
+                    <img src="/docs/BD.jpg" alt="Image de BD" class="responsive-img">
+                    <p class="image-caption">Bande dessinée 1984 George Orwell</p>
+                </div>
+                <div class="image-item">
+                    <img src="/docs/manga.jpg" alt="Image de Manga" class="responsive-img">
+                    <p class="image-caption">Une de mes series préferés</p>
+                </div>
+            </div>
+            <p>J'adore me plonger dans des mondes imaginaires et découvrir de nouvelles histoires.</p>
+            <li><h3>Jeux vidéo, en particulier les jeux rétro ou d'exploration</h3></li>
+            <div class="image-container">
+                <div class="image-item">
+                    <img src="/docs/nes.jpg" alt="Image NES" class="responsive-img">
+                    <p class="image-caption">Super mario bros (nes - 1985)</p>
+                </div>
+                <div class="image-item">
+                    <img src="/docs/AC.jpg" alt="Image AC" class="responsive-img">
+                    <p class="image-caption">Une de mes saga de monde ouvert préferé</p>
+                </div>
+            </div>
+            <p>Les jeux vidéo me permettent de me détendre et de développer ma réflexion stratégique et logique.</p>
         </ul>
     </section>
 
     <section class="section mb-4">
         <h2>Passions</h2>
         <ul>
-            <li>Programmation et développement de logiciels</li>
-            <img src="path/to/passion1.jpg" alt="Image de programmation">
-            <li>Technologies émergentes et innovations</li>
-            <img src="path/to/passion2.jpg" alt="Image de technologies">
-            <li>Intelligence artificielle et apprentissage automatique</li>
-            <img src="path/to/passion3.jpg" alt="Image d'intelligence artificielle">
-        </ul>
-    </section>
-
-    <section class="section mb-4">
-        <h2>Activités</h2>
-        <ul>
-            <li>Participation à des hackathons et compétitions de programmation</li>
-            <img src="path/to/activite1.jpg" alt="Image de hackathon">
-            <li>Contribution à des projets open source</li>
-            <img src="path/to/activite2.jpg" alt="Image de projet open source">
-            <li>Écriture d'articles de blog sur les technologies et le développement</li>
-            <img src="path/to/activite3.jpg" alt="Image de blog">
+            <li><h3>Programmation et 3D</h3></li>
+            <div class="image-container">
+                <div class="image-item">
+                    <img src="/docs/siteHT1.png" alt="Image de programmation" class="responsive-img">
+                    <p class="image-caption">Site blog sur le solex réalisé pour un TP</p>
+                </div>
+                <div class="image-item">
+                    <img src="/docs/terre3D.png" alt="Image Earth" class="responsive-img">
+                    <p class="image-caption">J'utilise blender pour mes modeles 3D</p>
+                </div>
+            </div>
+            <p>J'aime laisser parler ma créativité autour de divers projets.</p>
+            <li><h3>J'aime réparer et comprendre la mécanique et l'electronique</h3></li>
+            <div class="image-container">
+                <div class="image-item">
+                    <img src="/docs/PC.jpg" alt="Image PC" class="responsive-img">
+                    <p class="image-caption">J'ai deja construit et réparé de nombreux ordinateur</p>
+                </div>
+                <div class="image-item">
+                    <img src="/docs/Solex.jpg" alt="Image Solex" class="responsive-img">
+                    <p class="image-caption">Mon plus gros projet de restauration complete mecanique</p>
+                </div>
+            </div>
+            <p>Je suis toujours curieux de savoir comment fonctionne ce qui m'entour.</p>
+            <li><h3>Collection diverses : photographie, son, video, informatique</h3></li>
+            <div class="image-container">
+                <div class="image-item">
+                    <img src="/docs/camera.jpg" alt="Image appareil photo" class="responsive-img">
+                    <p class="image-caption">Camera 16mm</p>
+                </div>
+                <div class="image-item">
+                    <img src="/docs/mac.jpg" alt="Image informatique" class="responsive-img">
+                    <p class="image-caption">Macintosh performa 400 (1992)</p>
+                </div>
+            </div>
+            <p>Passionné d'histoire, je collectionne des objets dans ces domaines que j'apprécie tout particulièrement.</p>
         </ul>
     </section>
 
@@ -55,7 +101,4 @@
         <a class="btn btn-primary" href="/s/a/e104/Portfolio">Voir mon Portfolio</a>
     </div>
 </main>
-
-<button class="back-to-top" onclick="scrollToTop()">↑</button>
-
 {% endblock %}

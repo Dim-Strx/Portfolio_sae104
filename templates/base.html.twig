@@ -13,6 +13,57 @@
         {% endblock %}
     </head>
     <style>
+        /*Images*/
+
+        .responsive-img {
+            width: 100%;
+            height: auto;
+            max-width: 400px; /* Taille maximale pour toutes les images */
+            display: block;
+            margin: 10px auto; /* Centrer les images */
+            transition: transform 0.3s ease; /* Transition pour l'agrandissement */
+        }
+
+        .responsive-img:hover {
+            transform: scale(1.1); /* Agrandir l'image au survol */
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            flex: 1 1 30%; /* Ajuster la taille des images pour qu'elles soient côte à côte */
+            margin: 5px;
+        }
+
+        .image-item {
+            flex: 1 1 30%; /* Ajuster la taille des images pour qu'elles soient côte à côte */
+            margin: 5px;
+
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #555;
+            margin-top: 25px;
+        }
+
+        .technical-vocab {
+            font-size: 18px;
+            color:rgb(28, 32, 53);
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .image-item {
+                flex: 1 1 100%; /* Les images prennent toute la largeur en dessous de 768px */
+            }
+        }
+
         /*Page acceuil*/
         .wrapper { 
         margin: 1em auto; 
@@ -57,6 +108,31 @@
         }
         .back-to-top:hover {
             background-color: #0056b3;
+        }
+        /*boutton theme*/
+
+        .theme-toggle {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        cursor: pointer;
+        z-index: 1000;
+        }
+        .theme-toggle:hover {
+            background-color: #0056b3;
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .header.dark-mode, .section.dark-mode, footer.dark-mode {
+            background-color: #1e1e1e;
+            color: #ffffff;
         }
 
         /*page autres*/
@@ -210,12 +286,29 @@
             } else {
                 button.style.display = 'none';
             }
+            var button = document.querySelector('.theme-toggle');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = 'none';
+            } else {
+                button.style.display = 'block';
+            }
         };
         function scrollToTop() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+
+        function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelectorAll('.header, .section, footer').forEach(element => {
+            element.classList.toggle('dark-mode');
+        });
+        }
     </script>
+
+<button class="back-to-top" onclick="scrollToTop()">↑</button>
+<button class="theme-toggle" onclick="toggleTheme()">Mode Sombre/Clair</button>
+
 
 </html>
 
