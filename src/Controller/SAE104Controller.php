@@ -24,13 +24,13 @@ class SAE104Controller extends AbstractController
         ]);
     }
 
-    /*#[Route('/s/a/e104/Portfolio', name: 'app_Portfolio')]
+    #[Route('/s/a/e104/Portfolio', name: 'app_Portfolio')]
     public function Portfolio(): Response
     {
         return $this->render('sae104/Portfolio.html.twig', [
             'controller_name' => 'SAE104Controller',
         ]);
-    }*/
+    }
     
     #[Route('/s/a/e104/About', name: 'app_About')]
     public function About(): Response
